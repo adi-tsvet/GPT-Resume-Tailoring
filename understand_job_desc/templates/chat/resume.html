@@ -1,0 +1,14 @@
+{% load custom_filters %}
+<h1>Generated Resume</h1>
+<h2>Work Experience</h2>
+<ul>
+  {% for sentence in work_experience|split_sentences %}
+    <li>{{ sentence }}</li>
+  {% endfor %}
+</ul>
+
+
+<!-- Form to call home -->
+<form action="{% url 'home' %}">
+    <button type="submit">Go Home</button>
+</form>

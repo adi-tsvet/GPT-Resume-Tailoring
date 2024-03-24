@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summarize Job Description</title>
+</head>
+<body>
+    <h1>Summarize Job Description</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="job_description">Enter Job Description:</label><br>
+        <textarea id="job_description" name="job_description" rows="10" cols="50"></textarea><br>
+        <input type="submit" value="Summarize">
+    </form>
+</body>
+</html>

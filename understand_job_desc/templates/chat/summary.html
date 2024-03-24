@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Description Summary</title>
+</head>
+<body>
+    <h1>Job Description Summary</h1>
+    <p><strong>Original Job Description:</strong></p>
+    <p>{{ job_description }}</p>
+    
+    <h2>Summary</h2>
+    <p>{{ summary }}</p>
+
+    <h2>Keywords</h2>
+    <ul>
+    {% for keyword in keywords %}
+        <li>{{ keyword }}</li>
+    {% endfor %}
+    </ul>
+    
+<!-- Form to call generate_resume -->
+    <form action="{% url 'generate_resume' %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="job_description" value="{{ job_description }}">
+        <input type="hidden" name="keywords" value="{{ keywords }}">
+        <button type="submit">Generate Resume</button>
+    </form>
+</body>
+</html>
