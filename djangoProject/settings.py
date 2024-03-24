@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 import openai
 
-openai.api_key = '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'
+openai.api_key = '<Enter Key here>>'
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
